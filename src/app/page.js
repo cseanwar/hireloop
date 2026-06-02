@@ -1,5 +1,7 @@
 import Banner from "@/components/Banner";
+import CTASection from "@/components/CtaSection";
 import FeatureJobsSection from "@/components/FeatureJobsSection";
+import PricingSection from "@/components/PricingSection";
 import SmartJobDiscovery from "@/components/SmartJobDiscovery";
 import StatsSection from "@/components/StatsSection";
 
@@ -11,7 +13,8 @@ export default function Home() {
       <StatsSection />
       <SmartJobDiscovery />
       <FeatureJobsSection />
-
+      <PricingSection />
+      <CTASection />
     </div>
   );
 }

@@ -82,7 +82,7 @@ export default function Navbar() {
               ) : (
                 <Link
                   href="/auth/signin"
-                  className="text-sm font-medium text-violet-400 transition hover:text-violet-300"
+                  className="text-lg font-semibold text-[#5C53FE] transition hover:text-[#5C53FE]/80"
                 >
                   Sign In
                 </Link>

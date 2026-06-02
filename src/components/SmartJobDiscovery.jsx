@@ -1,13 +1,8 @@
 "use client";
 
-import {
-  ArrowUpRight,
-  Briefcase,
-  Clock3,
-  MapPin,
-} from "lucide-react";
+import { ArrowUpRight, Briefcase, Clock3, MapPin } from "lucide-react";
 
-import {CircleDollar} from '@gravity-ui/icons';
+import { CircleDollar } from "@gravity-ui/icons";
 
 const jobs = Array(6).fill({
   title: "Frontend Developer",
@@ -30,6 +25,9 @@ export default function SmartJobDiscovery() {
           backgroundSize: "26px 26px",
         }}
       />
+
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-black/40" />
 
       {/* Glow */}
       <div className="absolute top-1/3 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-violet-600/10 blur-[120px]" />
