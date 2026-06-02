@@ -33,7 +33,7 @@ export default function CTASection() {
 
         {/* Colorizing overlay to turn the multicolored grid into shades of blue and indigo */}
         <div
-          className="absolute inset-0 bg-gradient-to-b from-blue-600 via-indigo-600 to-indigo-900"
+          className="absolute inset-0 bg-linear-to-b from-blue-600 via-indigo-600 to-indigo-900"
           style={{ mixBlendMode: "color" }}
         />
 
