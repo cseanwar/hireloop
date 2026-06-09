@@ -22,14 +22,26 @@ export default function Navbar() {
       href: "/jobs",
     },
     {
-      label: "Company",
-      href: "/company",
+      label: "Companies",
+      href: "/companies",
     },
     {
       label: "Pricing",
-      href: "/pricing",
+      href: "/plans",
     },
   ];
+
+  const dashboardLinks = {
+    seeker: "/dashboard/seeker",
+    recruiter: "/dashboard/recruiter",
+  };
+
+  if (user?.email) {
+    navLinks.push({
+      label: "Dashboard",
+      href: dashboardLinks[user?.role || "seeker"],
+    });
+  }
 
   return (
     <nav className="sticky top-0 z-50 border-b border-white/10 bg-[#0B0B0F]/80 backdrop-blur-xl">
