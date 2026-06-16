@@ -11,11 +11,35 @@ export const authHeader = async () => {
     return header;
 }
 
+// export const authHeader = async () => {
+//     const token = await getUserToken();
+
+//     console.log("TOKEN:", token);
+
+//     return token
+//         ? { authorization: `Bearer ${token}` }
+//         : {};
+// }
+
 export const serverFetch = async (path) => {
     const res = await fetch(`${baseUrl}${path}`);
     
     return handleStatusCode(res);
 }
+
+// export const protectedFetch = async (path) => {
+//   const url = `${baseUrl}${path}`;
+
+//   console.log("BASE_URL =", baseUrl);
+//   console.log("PATH =", path);
+//   console.log("FULL URL =", url);
+
+//   const res = await fetch(url, {
+//     headers: await authHeader(),
+//   });
+
+//   return handleStatusCode(res);
+// };
 
 export const protectedFetch = async (path) => {
     const res = await fetch(`${baseUrl}${path}`,
