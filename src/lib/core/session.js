@@ -10,6 +10,14 @@ export const getUserSession = async () => {
     return session?.user || null;
 }
 
+export const getSession = async () => {
+  const session = await auth.api.getSession({
+    headers: await headers(),
+  });
+
+  return session;
+};
+
 export const getUserToken = async () => {
     const session = await auth.api.getSession({
         headers: await headers()
